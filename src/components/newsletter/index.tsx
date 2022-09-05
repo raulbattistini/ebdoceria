@@ -9,8 +9,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { Formik, Form } from "formik";
 import { newsletterSchema } from "../../helpers/schemas";
+import { useNavigate } from "react-router-dom";
 
 export const Newsletter = () => {
+  const navigate = useNavigate();
   const [emailNotification, setEmailNotification] = useState("");
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
@@ -26,13 +28,14 @@ export const Newsletter = () => {
 
   const handleSubmit = (email: string) =>{
     console.log(email);
+    navigate('/thank-you')
   }
   return (
     <div className="bg-[#A0A934]">
       <span className="font-inter text-3xl font-thin pl-24 pt-2 pb-2 top-10 text-white flex">
         Inscreva-se na nossa newsletter!
       </span>
-      <p className="font-inter text-white font-thin pl-3">
+      <p className="font-inter text-white font-thin pl-5 pr-3">
         Falamos de culinária, boas práticas na cozinha, sugerimos receitas e
         dicas e muito mais! Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Accusamus hic fugit, omnis veritatis id dolorum similique

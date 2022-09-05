@@ -1,6 +1,8 @@
 import { Grid } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import defaultImg from '../../assets/images/default.jpg'
+import facebook from "../../assets/images/icons/facebook.png";
+import instagram from "../../assets/images/icons/instagram.png";
 
 interface IPost {
   src?: string;
@@ -155,6 +157,19 @@ const fetchPosts = async () => {
             <img src={defaultImg} alt="" />
         </Grid>
       </Grid>
+          <div className="flex font-advent-pro text-2xl justify-center mt-8 text-white">
+          <span className="text-white pt-8 font-inter font-thin">  Para mais conteúdo, consulte nossas redes sociais: </span>
+            <img
+              src={facebook}
+              className="w-16 h-16 flex flex-row justify-between m-5 object-cover"
+              alt="Ícone do Facebook"
+            />
+            <img
+              src={instagram}
+              className="w-16 h-16 flex flex-row justify-between m-5"
+              alt="Ícone do Instagram"
+            />
+          </div>
     </div>
   );
 };
