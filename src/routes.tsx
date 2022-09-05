@@ -6,6 +6,7 @@ import { Menu } from './pages/MenuRedir'
 import { NotFound } from './pages/NotFound'
 import { CakePage } from './pages/CakePage'
 import { JellyPage } from './pages/JellyPage'
+import { TYP } from './pages/TYP'
 
 export const RoutesList = () => {
   return (
@@ -17,6 +18,7 @@ export const RoutesList = () => {
             <Route path="/geleias/:link"  element={<JellyPage/>} />
             <Route path="/menu" element={<Menu/>}/>
             <Route path="/FAQ"  element={<FAQ/>} />
+            <Route path="/thank-you"  element={<TYP/>} />
             <Route path="*" element={<NotFound/>}/>
         </Routes>
     </Router>
