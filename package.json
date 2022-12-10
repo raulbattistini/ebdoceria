@@ -1,7 +1,7 @@
 {
   "name": "ebdoceria-v3",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,6 @@
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.3",
     "@types/react-router-hash-link": "^2.4.5",
-    "@types/yup": "^0.32.0",
     "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -24,6 +23,7 @@
   "devDependencies": {
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "@types/yup": "^0.32.0",
     "@vitejs/plugin-react": "^2.0.1",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.16",
