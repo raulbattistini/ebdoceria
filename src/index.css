@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face{
+  font-family: 'Inter';
+  src: url("./assets/fonts/Inter.ttf");
+}
+@font-face{
+  font-family: 'Marck Script';
+  src: url("./assets/fonts/ms.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
