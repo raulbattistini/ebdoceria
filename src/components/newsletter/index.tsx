@@ -26,25 +26,22 @@ export const Newsletter = () => {
     setOpen(false);
   };
 
-  const handleSubmit = (email: string) =>{
+  const handleSubmit = (email: string) => {
     console.log(email);
-    navigate('/thank-you')
-  }
+    navigate("/thank-you");
+  };
   return (
-    <div className="bg-[#A0A934]">
-      <span className="font-inter text-3xl font-thin pl-24 pt-2 pb-2 top-10 text-white flex">
+    <div className=" bg-[#fefae0] h-full pb-10">
+      <span className=" text-3xl font-light pl-24 pt-2 pb-2 top-10 text-[#211e1e] flex">
         Inscreva-se na nossa newsletter!
       </span>
-      <p className="font-inter text-white font-thin pl-5 pr-3">
+      <p className=" text-[#211e1e] font-extralight pl-5 pr-3 text-center">
         Falamos de culinária, boas práticas na cozinha, sugerimos receitas e
-        dicas e muito mais! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Accusamus hic fugit, omnis veritatis id dolorum similique
-        obcaecati delectus minus quasi ab iusto aliquid totam facere ipsam harum
-        sequi, ipsum maxime.
+        dicas e muito mais. E tudo com base em 30 anos de experiência! 
       </p>
       <div>
         <button
-          className="bg-[#15CC74] font-inter font-thin text-2xl text-center flex flex-end self-center justify-center p-3 m-auto mt-3 rounded-md text-white"
+          className="bg-[#BD722F] font-thin text-2xl flex flex-end p-3 m-auto mt-5 rounded-md text-white hover:bg-[#dda15e] duration-300"
           onClick={handleClickOpen}
         >
           Quero me inscrever!
@@ -60,40 +57,43 @@ export const Newsletter = () => {
           </DialogTitle>
           <DialogContent>
             <DialogContentText>
-              Falamos de culinária, boas práticas na cozinha, sugerimos receitas
-              e dicas e muito mais! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Accusamus hic fugit, omnis veritatis id dolorum
-              similique obcaecati delectus minus quasi ab iusto aliquid totam
-              facere ipsam harum sequi, ipsum maxime.
+              Não enviamos spam. Não divulgamos seus dados. Você pode se desinscrever a qualquer momento.
             </DialogContentText>
             <Formik
               initialValues={{
                 emailNotification: "",
               }}
-              onSubmit={(values)=>{handleSubmit(values.emailNotification)}}
+              onSubmit={(values) => {
+                handleSubmit(values.emailNotification);
+              }}
               validationSchema={newsletterSchema}
             >
               {({ values, errors, touched, handleChange }) => {
                 return (
                   <Form>
-                    <label htmlFor="Email" className="flex flex-col text-center text-[#211e1e] font-inter">Digite seu email</label>
+                    <label
+                      htmlFor="Email"
+                      className="flex flex-col text-center text-[#211e1e] "
+                    >
+                      Digite seu email
+                    </label>
                     <input
                       type="email"
                       placeholder="myemail@example.com"
                       value={values.emailNotification}
-                      name='emailNotification'
+                      name="emailNotification"
                       onChange={handleChange}
                       className="w-96 outline-0 leading-3 pl-2 pt-2 pb-2 mt-2 ml-20 bg-[#fBfBfB] border-2    border-[#81B6E2] rounded-md"
                     />
-                    <span className="text-red-400 mt-2 text-center flex flex-col font-inter">
-                        {!!touched.emailNotification && errors.emailNotification}
-                        {touched.emailNotification && !!errors.emailNotification}
+                    <span className="text-red-400 mt-2 text-center flex flex-col ">
+                      {!!touched.emailNotification && errors.emailNotification}
+                      {touched.emailNotification && !!errors.emailNotification}
                     </span>
                     <DialogActions>
                       <Button autoFocus onClick={handleClose}>
                         Cancelar
                       </Button>
-                      <Button type='submit' autoFocus>
+                      <Button type="submit" autoFocus>
                         Enviar
                       </Button>
                     </DialogActions>
@@ -103,9 +103,6 @@ export const Newsletter = () => {
             </Formik>
           </DialogContent>
         </Dialog>
-      </div>
-      <div className="bg-[#A0A934] mt-3">
-      ⠀
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
+import { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { BsFacebook, BsInstagram } from "react-icons/bs";
 import defaultImg from "../../assets/images/default.jpg";
 import facebook from "../../assets/images/icons/facebook.png";
 import instagram from "../../assets/images/icons/instagram.png";
@@ -18,35 +19,23 @@ interface IPost {
 export const Footer = () => {
   // useEffect hook to fetch posts when component mounts
   useEffect(() => {
-    getPosts()
     console.log(postData);
   }, []);
 
   // useState hook to start with empty object for the map in render() section
   const [postData, setPostData] = useState<any>({});
-  const getPosts = async () => {
-    try {
-      const instagramUsername = "rbattistini_";
-      const res = await axios.get(`https://www.instagram.com/${instagramUsername}/?__a=1`);
-      console.log(res.data)
-      setPostData(res.data);
-    } catch (error) {
-      throw new Error(
-        error instanceof Error ? error.message : "Internal Server error"
-      );
-    }
-  };
+// https://developers.facebook.com/docs/graph-api/reference/instagram-oembed/
 
   return (
-    <div className="bg-[#A0A934]">
-      <span className="font-inter text-3xl font-thin pl-24 pt-2 pb-2 top-10 text-white flex">
+    <div className="">
+      <span className="text-3xl font-light pl-24 pt-2 pb-2 top-10 text-white flex bg-[#662606]">
         Nossas mídias sociais
       </span>
-      <span className="font-inter text-lg font-thin pl-24 pt-2 pb-2 top-10 text-white flex">
+      <span className="text-lg font-light pl-24 pt-2 pb-2 top-10 text-[#211e1e] flex bg-[#fefae0]">
         {" "}
         Últimos posts
       </span>
-      <div>
+      {/* <div>
         {postData?.photos.map(
           ({ src, url, id, likes, comments, caption }: IPost | any) => {
             return (
@@ -112,7 +101,7 @@ export const Footer = () => {
             );
           }
         )}
-      </div>
+      </div> */}
       {/* sample for layout view purposes. if React <=17 react-embed lib is an option */}
       <Grid container className="divide-x">
         <Grid item xs={3}>
@@ -128,21 +117,17 @@ export const Footer = () => {
           <img src={defaultImg} alt="" />
         </Grid>
       </Grid>
-      <div className="flex font-advent-pro text-2xl justify-center mt-8 text-white">
-        <span className="text-white pt-8 font-inter font-thin">
+      <div className="flex text-2xl justify-center text-[#211e1e] bg-[#fefae0]">
+        <span className="text-[#211e1e] pt-8 font-extralight">
           {" "}
           Para mais conteúdo, consulte nossas redes sociais:{" "}
         </span>
-        <img
-          src={facebook}
-          className="w-16 h-16 flex flex-row justify-between m-5 object-cover"
-          alt="Ícone do Facebook"
-        />
-        <img
-          src={instagram}
-          className="w-16 h-16 flex flex-row justify-between m-5"
-          alt="Ícone do Instagram"
-        />
+        <a href="https://www.facebook.com/EBDoceria" target="_blank">
+          <BsFacebook className="w-10 h-10 flex flex-row justify-between m-8 object-cover hover:text-[#dda15e] duration-300 cursor-pointer" />
+        </a>
+        <a href="https://instagram.com/_elisabetebattistini">
+          <BsInstagram className="w-10 h-10 flex flex-row justify-between m-8 hover:text-[#dda15e] duration-300 cursor-pointer" />
+        </a>
       </div>
     </div>
   );
