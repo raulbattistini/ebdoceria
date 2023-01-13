@@ -15,6 +15,8 @@ module.exports = {
         '"Share Tech Mono", "Helvetica", "Verdana", "Tahoma", "sans-serif"',
       ],
       marck: ['"Marck Script", cursive'],
+      brush: ['"Water Brush", cursive'],
+      montserrat: ['montserrat, "sans-serif"'],
     },
     extend: {
       colors: {
