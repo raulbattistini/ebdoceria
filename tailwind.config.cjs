@@ -2,6 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      'pocket': {'min': '280px', 'max': '479px'},
+      'phone': {'min': '480px', 'max': '639px'},
+      'tablet': {'min': '640px', 'max': '767px'},
+      'laptop': {'min': '768px', 'max': '1023px'},
+      'desktop': {'min': '1024px', 'max': '1279px'},
+      'ultrawide': { 'min': '1280px', 'max': '9999px'}
+    },
     fontFamily: {
       sans: ["ui-sans-serif", "system-ui"],
       serif: ["ui-serif", "Georgia"],
