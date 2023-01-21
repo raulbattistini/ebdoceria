@@ -24,14 +24,14 @@ export const Footer = () => {
 
   // useState hook to start with empty object for the map in render() section
   const [postData, setPostData] = useState<any>({});
-// https://developers.facebook.com/docs/graph-api/reference/instagram-oembed/
+  // https://developers.facebook.com/docs/graph-api/reference/instagram-oembed/
 
   return (
     <div className="">
-      <span className="text-3xl font-light pl-24 pt-2 pb-2 top-10 text-white flex bg-[#662606]">
+      <span className="text-xl font-light justify-center pt-2 pb-2 top-10 text-white flex bg-[#662606] pocket:text-md">
         Nossas mídias sociais
       </span>
-      <span className="text-lg font-light pl-24 pt-2 pb-2 top-10 text-[#211e1e] flex bg-[#fefae0]">
+      <span className="text-lg font-light justify-center pt-2 pb-2 top-10 text-[#211e1e] flex bg-[#fefae0]">
         {" "}
         Últimos posts
       </span>
@@ -117,17 +117,21 @@ export const Footer = () => {
           <img src={defaultImg} alt="" />
         </Grid>
       </Grid>
-      <div className="flex text-2xl justify-center text-[#211e1e] bg-[#fefae0]">
-        <span className="text-[#211e1e] pt-8 font-extralight">
-          {" "}
-          Para mais conteúdo, consulte nossas redes sociais:{" "}
-        </span>
-        <a href="https://www.facebook.com/EBDoceria" target="_blank">
-          <BsFacebook className="w-10 h-10 flex flex-row justify-between m-8 object-cover hover:text-[#dda15e] duration-300 cursor-pointer" />
-        </a>
-        <a href="https://instagram.com/_elisabetebattistini">
-          <BsInstagram className="w-10 h-10 flex flex-row justify-between m-8 hover:text-[#dda15e] duration-300 cursor-pointer" />
-        </a>
+      <div className="grid-cols-2 text-xl text-[#211e1e] bg-[#fefae0]">
+        <div className="flex">
+          <span className="pl-2 pocket:text-sm text-[#211e1e] pt-8 font-extralight">
+            {" "}
+            Para mais conteúdo, consulte nossas redes sociais:{" "}
+          </span>
+        </div>
+        <section className="flex py-2">
+          <a href="https://www.facebook.com/EBDoceria" target="_blank" className="justify-center flex">
+            <BsFacebook className="relative w-8 h-8 object-cover hover:text-[#dda15e] duration-300 cursor-pointer" />
+          </a>
+          <a href="https://instagram.com/_elisabetebattistini" className="justify-center flex">
+            <BsInstagram className="relative w-8 h-8 hover:text-[#dda15e] duration-300 cursor-pointer" />
+          </a>
+        </section>
       </div>
     </div>
   );
