@@ -1,22 +1,17 @@
-import React from "react";
-import { Footer } from "../../components/footer";
-import { Navbar } from "../../components/navbar";
-import { Newsletter } from "../../components/newsletter";
 
 export const FAQ = () => {
   return (
     <>
-      <Navbar />
       <div>
         <article className="bg-[#fefae0] text-[#211E1E] leading-6">
-          <h2 className=" font-thin text-3xl pl-24 pt-2 pb-2 top-10 flex">
+          <h2 className=" font-thin text-3xl justify-center py-2 px-3 top-10 flex">
             FAQ
           </h2>
-          <div className="bg-[#fefae0] text-[#211E1E] pl-28 max-w-2xl">
+          <div className="bg-[#fefae0] text-[#211E1E] justify-center px-3 max-w-2xl">
             <h3 className="text-[#211E1E] text-lg flex ">
               Como fazer pedidos no site?
             </h3>
-            <p className=" text-[#211e1e] font-light pr-3 h-12">
+            <p className=" text-[#211e1e] font-light pr-3 h-12 mb-8">
               No momento, ainda não temos suporte para pedidos no site. Mas você
               pode entrar em contato conosco pelo{" "}
               <a
@@ -29,7 +24,7 @@ export const FAQ = () => {
               </a>
               !
             </p>
-            <h3 className=" text-[#211e1e] text-lg ">
+            <h3 className=" text-[#211e1e] text-lg pt-12">
               Posso escolher outros sabores?
             </h3>
             <p className=" text-[#211e1e] font-light pr-3">
@@ -78,8 +73,6 @@ export const FAQ = () => {
         </article>
       </div>
 
-      <Footer />
-      <Newsletter />
     </>
   );
 };

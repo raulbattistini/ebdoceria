@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "../../components/footer";
 import { Navbar } from "../../components/navbar";
-import sucess from "../../assets/images/icons/check.svg";
-import home from "../../assets/images/icons/home.png";
+// import sucess from "../../assets/images/icons/check.svg";
+// import home from "../../assets/images/icons/home.png";
 
 export const TYP = () => {
   return (
@@ -11,11 +11,11 @@ export const TYP = () => {
       <Navbar />
       
       <div className="bg-white flex flex-col content-center mt-10 justify-center items-center">
-        <img
+        {/* <img
           src={sucess}
           alt="Check verde de sucesso"
           className="flex  self-center justify-self-auto object-cover relative flex-row"
-        />
+        /> */}
         <h1 className="text-black font-inter text-4xl flex flex-row">
           Obrigado por se cadastrar!
         </h1>
@@ -30,11 +30,11 @@ export const TYP = () => {
               {" "}
               Retornar à home
             </span>
-            <img
+            {/* <img
               src={home}
               alt="Imagem de uma casa - homepage"
               className="w-12 h-12 ml-6 mt-16 flex"
-            />{" "}
+            />{" "} */}
           </Link>
         </div>
         

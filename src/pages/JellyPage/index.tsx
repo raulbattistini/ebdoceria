@@ -40,7 +40,7 @@ export const JellyPage = () => {
   return (
     <div>
       <Navbar />
-      <span className=" font-thin text-3xl bg-[#A0A934] pl-24 pt-2 pb-2 top-10 text-white flex">
+      <span className=" font-thin text-3xl bg-[#BD722F] pl-24 pt-2 pb-2 top-10 text-white flex">
         {linkToName(link)}
       </span>
       <img
