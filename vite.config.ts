@@ -13,8 +13,8 @@ export default defineConfig({
       },
       injectRegister: "auto",
       manifest: {
-        name: "vite-react-ts-100",
-        short_name: "vite-react-ts-100",
+        name: "EB Doceria Gourmet",
+        short_name: "EB Doceria Gourmet",
         start_url: "/",
         display: "standalone",
         background_color: "#ffffff",
